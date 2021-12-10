@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pre_course</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="main-container">
+        <header class="main-container__header">
+            <h1>Top 50 Best Places To Visit Post-Pandemic</h1>
+        </header>
+        <section class="main-container__dashboard">
+            <aside class="dashboard__aside">
+                <h2 class="aside__title">From Forbes ADVISOR's Research</h2>
+                <div class="aside__table">
+                    <div class="table__header">
+                        <p class="header__index">#</p>
+                        <p class="header__name">Location</p>
+                    </div>
+                    {# 크롤링한 여행지 리스트 for문으로 출력하기 #}
+                    {%  %}
+                    <div class="table__list">
+                        <div class="list__index">{{  }}</div>
+                        <div class="list__name">{{  }}</div>
+                    </div>
+                    {%  %}
+                </div>
+            </aside>
+            <article class="dashboard__article">
+                <header class="article__header">
+                    <div class="header__title">
+                        <h2>World Map of the top 50 places</h2>
+                        <h3>using the data we've crawled</h3>
+                    </div>
+                    <div class="header__profile">
+                        {# playdata.png 적용하기#}
+                        <img src="" alt="playdata">
+                    </div>
+                </header>
+                <div class="article__body">
+                    <div class="body__map">
+                        {# 시각화 결과물 템플릿 출력하기 #}
+                        {{ |safe }}
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+</body>
+</html>

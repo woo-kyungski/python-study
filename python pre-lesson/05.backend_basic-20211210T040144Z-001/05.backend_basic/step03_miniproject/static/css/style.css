@@ -1,0 +1,131 @@
+/* reset.css */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    /* font-family: 'Oswald', sans-serif; */
+    font-family: 'montserrat','Noto Sans Korean','Apple SD Gothic Neo', 'Malgun Gothic','Nanum Gothic', 'Noto Sans','sans-serif';
+}
+
+/* style.css */
+.main-container__header h1 {
+    padding: 0.67em;
+    margin: 0;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url('../image/airplane.jpg');
+    z-index: -1;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.main-container {
+    width: 80vw;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.main-container__header {
+    color: #fff;
+}
+
+.main-container__dashboard  {
+    display: flex;
+    height: 80vh;
+    background-color: #fff;
+    box-shadow: 2px 2px 4px 2px #bebebe;
+}
+
+.dashboard__aside {
+    padding: 0 10px;
+    flex:0.2;
+    overflow: auto;
+}
+
+.table__header {
+    display: flex;
+    border-bottom: 2px solid #000;
+}
+
+.header__index, .list__index {
+    width: 50px;
+}
+
+.table__list {
+    display: flex;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.dashboard__article {
+    display: flex;
+    flex:0.8;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article__header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.header__title {
+    flex: 0.5;
+    margin-left: 20px;
+}
+
+.header__profile {
+    display: flex;
+    flex: 0.5;
+    justify-content: end;
+    margin-right: 20px;
+}
+
+.header__profile img {
+    width: 160px;
+    height: 36px;
+    margin : 15px 20px;
+}
+
+.header__profile p {
+    font-size: 30px;
+    margin-top : 5px;
+}
+
+.article__body {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.body__map {
+    width: 100%;
+}
+
+.body__images {
+    width: 100%;
+}
+
+.images__image {
+    width: 100%;
+}
+
+.images__image iframe, .images__image img {
+    width: 100%;
+    height: 55vh;
+}
+
+.images__image > img {
+    overflow: hidden;
+}
