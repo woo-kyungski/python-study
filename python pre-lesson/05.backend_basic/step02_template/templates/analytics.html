@@ -1,3 +1,4 @@
+# analytics.html
 <!DOCTYPE html>
 <html>
 <title>W3.CSS Template</title>
@@ -26,7 +27,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <div class="w3-col s8 w3-bar">
       <!-- name -->
       {# 지정 변수(name) 출력하기 #}
-      <span>Welcome, <strong></strong></span><br>
+      <span>Welcome, <strong>{{name}}</strong></span><br>
       <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
       <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
       <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
@@ -159,8 +160,9 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
       <!-- pre_course -->
       {# for문을 이용하여 pre_course 출력하기 #}
-      <tr><td>테이블 데이터 1</td></tr>  
-      <tr><td>테이블 데이터 2</td></tr>
+      {% for step in pre_lesson %}
+      <tr><td> STEP {{loop.index}} : {{step}}</td></tr>  
+      {% endfor %}
     </table><br>
     <button class="w3-button w3-dark-grey">Apply Bootcamp <i class="fa fa-arrow-right"></i></button>
   </div>

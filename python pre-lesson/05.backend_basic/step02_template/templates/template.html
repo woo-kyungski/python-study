@@ -22,14 +22,15 @@
     <!-- HTML 주석 -->
     {# 주석 #}
     {# 결과 출력 : {{ 변수 }} #}
-    <h3></h3>
+    <h3>{{title}}</h3>
     <h5>1. 출력</h5>
     <ul>
         {# 리스트 출력 #}
-        
+        {{nums_list}}
 
         {# 딕셔너리 출력 #}
-
+        {{nums_dict}}
+    
     </ul>
 
     <hr>
@@ -38,11 +39,21 @@
     <h5>2. if문</h5>
     <div>
         {# 단순 if문 #}
-        
+        {% if True %}
+            참일 때, 출력되는 구문
+        {% endif %}
         <br>
         
         {# 복합 if문 #}
         {# if True #}
+        {% if (1 > 2) %}
+        결과 1
+    {% elif (3 > 4) %}
+        결과 2
+    {% else %}
+        결과 3
+    {% endif %}
+        
 
     </div>
 
@@ -50,9 +61,11 @@
 
     {# for문 주석 #}
     <h5>3. for문</h5>
-    <ol>
-
-    </ol>
+    <ul>
+        {% for num in nums_list%}
+            <li>반복횟수 : {{loop.index0}}, {{num}}</li>
+        {% endfor %}
+    </ul>
     
 </body>
 </html>

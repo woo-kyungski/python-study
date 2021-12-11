@@ -25,12 +25,12 @@
                         <p class="header__name">Location</p>
                     </div>
                     {# 크롤링한 여행지 리스트 for문으로 출력하기 #}
-                    {%  %}
+                    {% for site in sites%}
                     <div class="table__list">
-                        <div class="list__index">{{  }}</div>
-                        <div class="list__name">{{  }}</div>
+                        <div class="list__index">{{ loop.index }}</div>
+                        <div class="list__name">{{ site }}</div>
                     </div>
-                    {%  %}
+                    {% endfor %}
                 </div>
             </aside>
             <article class="dashboard__article">
@@ -41,13 +41,13 @@
                     </div>
                     <div class="header__profile">
                         {# playdata.png 적용하기#}
-                        <img src="" alt="playdata">
+                        <img src="../static/image/playdata.png" alt="playdata">
                     </div>
                 </header>
                 <div class="article__body">
                     <div class="body__map">
                         {# 시각화 결과물 템플릿 출력하기 #}
-                        {{ |safe }}
+                        {{ map | safe }}
                     </div>
                 </div>
             </article>
